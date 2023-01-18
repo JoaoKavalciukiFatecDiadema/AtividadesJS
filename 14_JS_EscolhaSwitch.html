@@ -1,0 +1,54 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC = "-//W3C//DTD XHTML 1.0 Strict//BR "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Hello world js</title>
+        <style type="style/css">
+        </style>
+        <script type = "text/javascript">
+            var escolha
+            var tagInit
+            var tagEnd
+            var validaInput = true
+            var listType
+            escolha = prompt("Seleciona o tipo de lista:\n" + "1 (Numerico), 2 (Letra), 3 (Romano)", "1")
+
+            switch (escolha) {
+                case "1":
+                    tagInit = "<ol>"
+                    tagEnd = "</ol>"
+                    listType = "<h1>Lista numerica</h1>"
+                    break;
+                case "2":
+                    tagInit = "<ol style = \"list-style-type: upper-alpha\">"
+                    tagEnd = "</ol>"
+                    listType = "<h1> Lista numerica </h1>"
+                    break;
+                case "3":
+                    tagInit = "<ol style = \"list-style-type: upper-roman\">"
+                    tagEnd = "</ol>"
+                    listType = "<h1> Lista Romana </h1>"
+                    break;
+                default:
+                    validaInput = false;
+            }
+
+            if(validaInput == true){
+                for(var i = 1; i<=3; ++i){
+                    document.writeln("<li>List item " + i + "</li>")
+                    document.writeln(tagEnd)
+                }
+            } else{
+                document.writeln("Opção invalida " + escolha)
+            }
+
+        </script>
+    </head>
+
+<body>
+    
+</body>
+
+</html>
